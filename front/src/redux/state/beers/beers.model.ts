@@ -8,6 +8,12 @@ export const BeerActionTypes = {
   BEERS_SET: '@BEERS/SET',
   BEERS_CREATE: '@BEERS/CREATE',
   BEERS_SET_NEW: '@BEERS/SET_NEW',
+  BEERS_RATE: '@BEERS/RATE',
+  BEERS_GET: '@BEERS/GET',
+  BEERS_GET_SUCCESS: '@BEERS/GET_SUCCESS',
+  BEERS_GET_FAILURE: '@BEERS/GET_FAILURE',
+  BEER_SET: '@BEER/SET',
+
 } as const
 
 export interface BeerReducerState {

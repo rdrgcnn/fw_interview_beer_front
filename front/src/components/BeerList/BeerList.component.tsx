@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { BeerItem } from "../BeerItem";
+import BeerItem from "../BeerItem";
 import { Loader } from "../Loader";
 
 import styles from "./BeerList.module.scss";

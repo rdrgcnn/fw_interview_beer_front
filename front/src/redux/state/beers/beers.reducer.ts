@@ -21,6 +21,14 @@ export const beersReducer = (
       return { ...state, loading: false }
     case BeerActionTypes.BEERS_SET_NEW:
       return { ...state, newItems: [...state.newItems, action.beer] }
+    case BeerActionTypes.BEER_SET: 
+      const beerIndex = state.items.findIndex((beer) => beer.uuid === action.beer.uuid)
+      if (beerIndex !== -1) {
+        const updatedItems = [...state.items]
+        updatedItems[beerIndex] = action.beer
+        return { ...state, items: updatedItems }
+      }
+      return { ...state, items: [...state.items, action.beer] }
     default:
       return state
   }
